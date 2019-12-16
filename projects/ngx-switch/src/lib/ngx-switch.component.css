@@ -2,21 +2,23 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 3.5rem;
-  height: 2rem;
+  /* width: 3.5rem;
+  height: 2rem; */
+  pointer-events: none;
 }
 
 /* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+  cursor: pointer;
 }
 
 /* The slider */
 .slider {
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
@@ -65,7 +67,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.toggle-label {
+/* .toggle-label {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   height: 2rem;
@@ -78,4 +80,4 @@ input:checked + .slider:before {
 
 .toggle-label-off {
   color: #788995
-}
+} */

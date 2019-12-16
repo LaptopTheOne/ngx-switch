@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { defaultNgxSwitchTheme, NgxSwitchTheme } from './ngx-switch-models';
 
 @Component({
   selector: 'lib-ngx-switch',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ngx-switch.component.css']
 })
 export class NgxSwitchComponent implements OnInit {
+
+  @Input() theme: NgxSwitchTheme = defaultNgxSwitchTheme;
 
   constructor() { }
 
