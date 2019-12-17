@@ -12,17 +12,27 @@ export interface NgxSwitchTheme {
     bgColor?: string;
     bgBorderWidth?: string;
     bgBorderColor?: string;
-    switchColor?: string;
+    bgBorderStyle?: string;
+    bgBorderRadius?: string;
+    switchBgColor?: string;
+    switchBorderStyle?: string;
     switchBorderColor?: string;
     switchBorderWidth?: string;
+    switchBorderRadius?: string;
+    switchBoxShadow?: string;
   };
   unchecked?: {
     bgColor?: string;
     bgBorderWidth?: string;
     bgBorderColor?: string;
-    switchColor?: string;
+    bgBorderStyle?: string;
+    bgBorderRadius?: string;
+    switchBgColor?: string;
+    switchBorderStyle?: string;
     switchBorderColor?: string;
     switchBorderWidth?: string;
+    switchBorderRadius?: string;
+    switchBoxShadow?: string;
   };
 }
 
@@ -37,19 +47,27 @@ export const defaultNgxSwitchTheme: NgxSwitchTheme = {
     animationSpeed: '.4s'
   },
   checked: {
-    bgColor: '',
-    bgBorderWidth: '',
-    bgBorderColor: '',
-    switchColor: '',
-    switchBorderColor: '',
-    switchBorderWidth: ''
+    bgColor: '#4dc7f0',
+    bgBorderWidth: '1px',
+    bgBorderRadius: '34px',
+    bgBorderColor: '#14568d',
+    bgBorderStyle: 'solid',
+    switchBgColor: 'white',
+    switchBorderColor: 'rgba(0, 0, 0, 0.1)',
+    switchBorderWidth: '0.5px',
+    switchBorderRadius: '50%',
+    switchBoxShadow: '0 3px 3px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 1px 0 rgba(0, 0, 0, 0.05)',
   },
   unchecked: {
-    bgColor: '',
-    bgBorderWidth: '',
-    bgBorderColor: '',
-    switchColor: '',
-    switchBorderColor: '',
-    switchBorderWidth: ''
+    bgColor: '#b9b9b9',
+    bgBorderWidth: '1px',
+    bgBorderRadius: '34px',
+    bgBorderColor: '#676767',
+    bgBorderStyle: 'solid',
+    switchBgColor: 'white',
+    switchBorderColor: 'rgba(0, 0, 0, 0.1)',
+    switchBorderWidth: '0.5px',
+    switchBorderRadius: '50%',
+    switchBoxShadow: '0 3px 3px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 1px 0 rgba(0, 0, 0, 0.05)'
   }
 };

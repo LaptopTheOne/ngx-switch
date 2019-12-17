@@ -9,10 +9,16 @@ import { defaultNgxSwitchTheme, NgxSwitchTheme } from './ngx-switch-models';
 export class NgxSwitchComponent implements OnInit {
 
   @Input() theme: NgxSwitchTheme = defaultNgxSwitchTheme;
+  checkboxStatus: boolean;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngxHandleClick($event) {
+    this.checkboxStatus = $event.srcElement.checked;
+    console.log(this.checkboxStatus);
   }
 
 }
