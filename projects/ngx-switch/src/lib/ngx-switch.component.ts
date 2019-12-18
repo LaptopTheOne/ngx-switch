@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { defaultNgxSwitchTheme, NgxSwitchTheme } from './ngx-switch-models';
+import { NgxSwitchConfig } from './ngx-switch-config';
 
 @Component({
   selector: 'lib-ngx-switch',
@@ -10,10 +11,14 @@ export class NgxSwitchComponent implements OnInit {
 
   @Input() theme: NgxSwitchTheme = defaultNgxSwitchTheme;
   checkboxStatus: boolean;
+  config: NgxSwitchConfig;
+  sliderStartOffset: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.config = new NgxSwitchConfig(this.theme);
+    this.sliderStartOffset = this.config.getSliderTranslateOffset();
   }
 
   ngxHandleClick($event) {

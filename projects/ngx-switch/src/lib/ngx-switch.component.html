@@ -5,26 +5,27 @@
     'height': theme.common.bgHeight,
     '-webkit-transition': theme.common.animationSpeed,
     'transition': theme.common.animationSpeed,
+    'border-width': theme.common.bgBorderWidth,
     'background-color': checkboxStatus ? theme.checked.bgColor : theme.unchecked.bgColor,
     'border-color': checkboxStatus ? theme.checked.bgBorderColor : theme.unchecked.bgBorderColor,
-    'border-width': checkboxStatus ? theme.checked.bgBorderWidth : theme.unchecked.bgBorderWidth,
     'border-style': checkboxStatus ? theme.checked.bgBorderStyle : theme.unchecked.bgBorderStyle,
     'border-radius': checkboxStatus ? theme.checked.bgBorderRadius : theme.unchecked.bgBorderRadius
   }">
     <input type="checkbox" (click)="ngxHandleClick($event)">
-    <span class="ngx-slider-tmp round"></span>
-    <div class="ngx-slider-tmp" [ngStyle]="{
+    <!-- <span class="ngx-slider-tmp round"></span> -->
+    <div class="ngx-slider" [ngStyle]="{
       'width' : theme.common.switchWidth,
       'height' : theme.common.switchHeight,
       '-webkit-transition' : theme.common.animationSpeed,
       'transition' : theme.common.animationSpeed,
+      'border-width' :  theme.common.switchBorderWidth,
       'background-color' : checkboxStatus ? theme.checked.switchBgColor : theme.unchecked.switchBgColor,
       'border-color' : checkboxStatus ? theme.checked.switchBorderColor : theme.unchecked.switchBorderColor,
-      'border-width' : checkboxStatus ? theme.checked.switchBorderWidth : theme.unchecked.switchBorderWidth,
       'border-style' : checkboxStatus ? theme.checked.switchBorderStyle : theme.unchecked.switchBorderStyle,
       'border-radius' : checkboxStatus ? theme.checked.switchBorderRadius : theme.unchecked.switchBorderRadius,
       'box-shadow' : checkboxStatus ? theme.checked.switchBoxShadow : theme.unchecked.switchBoxShadow,
-      'left' : 0,
+      'left': sliderStartOffset,
+      'bottom': sliderStartOffset,
       '-webkit-transform' : checkboxStatus ? 'translateX(1.625rem)' : 'translateX(0rem)',
       '-ms-transform' : checkboxStatus ? 'translateX(1.625rem)' : 'translateX(0rem)',
       'transform' : checkboxStatus ? 'translateX(1.625rem)' : 'translateX(0rem)'
