@@ -13,12 +13,14 @@ export class NgxSwitchComponent implements OnInit {
   checkboxStatus: boolean;
   config: NgxSwitchConfig;
   sliderStartOffset: string;
+  sliderTranslateOffset: string;
 
   constructor() { }
 
   ngOnInit() {
     this.config = new NgxSwitchConfig(this.theme);
-    this.sliderStartOffset = this.config.getSliderTranslateOffset();
+    this.sliderStartOffset = this.config.getSliderStartOffset();
+    this.sliderTranslateOffset = this.config.getSliderTranslateOffset();
   }
 
   ngxHandleClick($event) {

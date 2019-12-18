@@ -26,9 +26,9 @@
       'box-shadow' : checkboxStatus ? theme.checked.switchBoxShadow : theme.unchecked.switchBoxShadow,
       'left': sliderStartOffset,
       'bottom': sliderStartOffset,
-      '-webkit-transform' : checkboxStatus ? 'translateX(1.625rem)' : 'translateX(0rem)',
-      '-ms-transform' : checkboxStatus ? 'translateX(1.625rem)' : 'translateX(0rem)',
-      'transform' : checkboxStatus ? 'translateX(1.625rem)' : 'translateX(0rem)'
+      '-webkit-transform' : checkboxStatus ? 'translateX('+ sliderTranslateOffset +')' : 'translateX(0rem)',
+      '-ms-transform' : checkboxStatus ? 'translateX('+ sliderTranslateOffset +')' : 'translateX(0rem)',
+      'transform' : checkboxStatus ? 'translateX('+ sliderTranslateOffset +')' : 'translateX(0rem)'
     }">
     </div>
   </div>
