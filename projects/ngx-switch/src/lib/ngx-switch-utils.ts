@@ -8,23 +8,23 @@ export class Utils {
     this.pxRemRatio = pixelRemRatio;
   }
 
-  public convertRemToPx(rem: number) { return rem * this.pxRemRatio }
+  public convertRemToPx(rem: number) { return rem * this.pxRemRatio; }
 
-  public convertPxToRem(px: number) { return px / this.pxRemRatio }
+  public convertPxToRem(px: number) { return px / this.pxRemRatio; }
 
   public getCSSUnitType(cssValue: string): string {
-    if(cssValue.includes(CONST.PX_STR)) {
+    if (cssValue.includes(CONST.PX_STR)) {
       return CONST.PX_STR;
-    } else if(cssValue.includes(CONST.REM_STR)) {
+    } else if (cssValue.includes(CONST.REM_STR)) {
       return CONST.REM_STR;
-    } else if(cssValue.includes(CONST.EM_STR)) {
+    } else if (cssValue.includes(CONST.EM_STR)) {
       return CONST.EM_STR;
     }
   }
 
   public getCSSUnitNum(cssValue: string): number {
-    switch(this.getCSSUnitType(cssValue)) {
-      case CONST.PX_STR: return parseInt(cssValue.replace(CONST.PX_STR, '')); break;
+    switch (this.getCSSUnitType(cssValue)) {
+      case CONST.PX_STR: return parseInt(cssValue.replace(CONST.PX_STR, ''), 10); break;
       case CONST.REM_STR: return parseFloat(cssValue.replace(CONST.REM_STR, '')); break;
       case CONST.EM_STR: return parseFloat(cssValue.replace(CONST.EM_STR, '')); break;
     }
@@ -45,8 +45,8 @@ export class Utils {
   }
 
   private convertCSSUnitToPX(cssValue: string): number {
-    switch(this.getCSSUnitType(cssValue)) {
-      case CONST.PX_STR: return parseInt(cssValue.replace(CONST.PX_STR, '')); break;
+    switch (this.getCSSUnitType(cssValue)) {
+      case CONST.PX_STR: return parseInt(cssValue.replace(CONST.PX_STR, ''), 10); break;
       case CONST.REM_STR: return this.pxRemRatio * parseFloat(cssValue.replace(CONST.REM_STR, '')); break;
     }
   }

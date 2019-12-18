@@ -1,5 +1,6 @@
 export interface NgxSwitchTheme {
   common?: {
+    isVertical?: boolean;
     switchRadius?: string;
     switchWidth?: string;
     switchHeight?: string;
@@ -36,6 +37,7 @@ export interface NgxSwitchTheme {
 
 export const defaultNgxSwitchTheme: NgxSwitchTheme = {
   common: {
+    isVertical: false,
     switchRadius: '34px',
     switchWidth: '1.75rem',
     switchHeight: '1.75rem',
