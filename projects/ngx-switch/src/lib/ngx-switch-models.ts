@@ -37,15 +37,18 @@ export interface NgxSwitchTheme {
 
 export const defaultNgxSwitchTheme: NgxSwitchTheme = {
   common: {
-    isVertical: false,
+    // isVertical: false,
+    // bgWidth: '3.5rem',
+    // bgHeight: '2rem',
+    isVertical: true,
+    bgWidth: '2rem',
+    bgHeight: '3.5rem',
+    bgBorderWidth: '1px',
+    bgRadius: '50%',
     switchRadius: '34px',
     switchWidth: '1.75rem',
     switchHeight: '1.75rem',
     switchBorderWidth: '0.5px',
-    bgRadius: '50%',
-    bgWidth: '3.5rem',
-    bgHeight: '2rem',
-    bgBorderWidth: '1px',
     animationSpeed: '.4s',
   },
   checked: {

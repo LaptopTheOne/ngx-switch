@@ -24,11 +24,11 @@
       'border-style' : checkboxStatus ? theme.checked.switchBorderStyle : theme.unchecked.switchBorderStyle,
       'border-radius' : checkboxStatus ? theme.checked.switchBorderRadius : theme.unchecked.switchBorderRadius,
       'box-shadow' : checkboxStatus ? theme.checked.switchBoxShadow : theme.unchecked.switchBoxShadow,
-      'left': sliderStartOffset,
-      'bottom': sliderStartOffset,
-      '-webkit-transform' : checkboxStatus ? 'translateX('+ sliderTranslateOffset +')' : 'translateX(0rem)',
-      '-ms-transform' : checkboxStatus ? 'translateX('+ sliderTranslateOffset +')' : 'translateX(0rem)',
-      'transform' : checkboxStatus ? 'translateX('+ sliderTranslateOffset +')' : 'translateX(0rem)'
+      'left': sliderLeftStartOffset,
+      'bottom': sliderBottomStartOffset,
+      '-webkit-transform' : !theme.common.isVertical ? (checkboxStatus ? 'translateX('+ sliderTranslateOffset +')' : 'translateX(0rem)') : (checkboxStatus ? 'translateY('+ sliderTranslateOffset +')' : 'translateY(0rem)'),
+      '-ms-transform' : !theme.common.isVertical ? (checkboxStatus ? 'translateX('+ sliderTranslateOffset +')' : 'translateX(0rem)') : (checkboxStatus ? 'translateY('+ sliderTranslateOffset +')' : 'translateY(0rem)'),
+      'transform' : !theme.common.isVertical ? (checkboxStatus ? 'translateX('+ sliderTranslateOffset +')' : 'translateX(0rem)') : (checkboxStatus ? 'translateY('+ sliderTranslateOffset +')' : 'translateY(0rem)')
     }">
     </div>
   </div>
